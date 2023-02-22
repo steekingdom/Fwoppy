@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>e-game</name>
+    <events>
+        <variable constant="0" name="yarnend" sid="908301773547251" static="0" type="number">0</variable>
+        <variable constant="0" name="pause" sid="183174145374783" static="0" type="number">0</variable>
+        <event-block sid="983681467131993">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="442116521913884" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="12" name="Set world gravity" sid="412329282370763" type="coots">
+                    <param id="0" name="Gravity">20</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="856021695498020" type="Mouse">
+                    <param id="0" name="Cursor style">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="558114141633838">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="502380027933748" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="104021713435423" type="cursor">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="761570222802153">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="598659289560985" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+                <condition behavior="Physics" id="1" name="Compare velocity" sid="179503862908156" type="coots">
+                    <param id="0" name="Which">1</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="3" name="Apply impulse" sid="160605452665828" type="coots">
+                    <param id="0" name="Impulse X">0</param>
+                    <param id="1" name="Implulse Y">-10</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="769103426422395" type="Audio">
+                    <param id="0" name="Audio file">jump</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-35</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="702664544182433">
+            <conditions>
+                <condition id="2" name="Key is down" sid="463359422742596" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="0" name="Apply force" sid="597630053592540" type="coots">
+                    <param id="0" name="Force X">-8</param>
+                    <param id="1" name="Force Y">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="113790162951212">
+            <conditions>
+                <condition id="2" name="Key is down" sid="145454705896397" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="0" name="Apply force" sid="769575601232114" type="coots">
+                    <param id="0" name="Force X">8</param>
+                    <param id="1" name="Force Y">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="728561466645781">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="194717652340135" type="coots">
+                    <param id="0" name="Object">Yarn</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="968839437014431" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="1" name="Apply force towards position" sid="706421502377544" type="Yarn">
+                    <param id="0" name="Force">-200</param>
+                    <param id="1" name="X">-coots.X</param>
+                    <param id="2" name="Y">-coots.Y</param>
+                    <param id="3" name="Image point">1</param>
+                </action>
+                <action behavior="Physics" id="2" name="Apply force at angle" sid="346604232009756" type="Yarn">
+                    <param id="0" name="Force">500</param>
+                    <param id="1" name="Angle">-35</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="989779820350003">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="769062456111305" type="coots">
+                    <param id="0" name="Object">Yarn</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="696080839317463" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="1" name="Apply force towards position" sid="775140209526129" type="Yarn">
+                    <param id="0" name="Force">100</param>
+                    <param id="1" name="X">-coots.X</param>
+                    <param id="2" name="Y">-coots.Y</param>
+                    <param id="3" name="Image point">1</param>
+                </action>
+                <action behavior="Physics" id="2" name="Apply force at angle" sid="987144423090059" type="Yarn">
+                    <param id="0" name="Force">150</param>
+                    <param id="1" name="Angle">280</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="887196662498282">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="298983631372352" type="Yarn">
+                    <param id="0" name="Object">qt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="21" name="Set immovable" sid="690695170417508" type="Yarn">
+                    <param id="0" name="Setting">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="900626538795090" type="System">
+                    <param id="0" name="Variable">yarnend</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="280143495943049">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="661423500872515" type="coots">
+                    <param id="0" name="Object">qt</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="504073589827072">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="903678333919903" type="System">
+                            <param id="0" name="Variable">yarnend</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="991262718205510" type="System">
+                            <param id="0" name="Layout">game over</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="512497131595234">
+            <conditions>
+                <condition id="3" name="On key released" sid="821102032667254" type="Keyboard">
+                    <param id="0" name="Key">8 (Backspace)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="970713032177607" type="System" />
+                <action id="-26" name="Restart layout" sid="203832232481818" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="138780328381953">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="813409672137155" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="271970570644758">
+                    <conditions />
+                    <actions>
+                        <action id="10" name="Request fullscreen" sid="355760142840608" type="Browser">
+                            <param id="0" name="Mode">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="900261613972051">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="350730603188177" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Cancel fullscreen" sid="346586955781415" type="Browser" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="813125693217968">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="366128995130347" type="Keyboard">
+                    <param id="0" name="Key">77 (M)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="980265054272537">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="852235384689949" type="System">
+                            <param id="0" name="Variable">music</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;on&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Set master volume" sid="567406616584876" type="Audio">
+                            <param id="0" name="dB">-1000</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="275379927263578" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="556089389083642" type="System">
+                            <param id="0" name="Variable">music</param>
+                            <param id="1" name="Value">&quot;off&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="196997076901210">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="191541152717874" type="System">
+                            <param id="0" name="Variable">music</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;off&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Set master volume" sid="481866562862926" type="Audio">
+                            <param id="0" name="dB">-35</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="214117239457361" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="691960082327484" type="System">
+                            <param id="0" name="Variable">music</param>
+                            <param id="1" name="Value">&quot;on&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="779981100681853" title="Pause">
+            <sub-events>
+                <event-block sid="648243917925343">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="772309418683027" type="Keyboard">
+                            <param id="0" name="Key">80 (P)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="727248225584526" type="System">
+                            <param id="0" name="Variable">pause</param>
+                            <param id="1" name="Value">pause + 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="646693190714568">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="471354137845680" type="System">
+                            <param id="0" name="Variable">pause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="542007313626963" type="System">
+                            <param id="0" name="Layer">&quot;Pause&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="219375518958088" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="792607972277721">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="319362589897970" type="System">
+                            <param id="0" name="Variable">pause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="355046238669749" type="System">
+                            <param id="0" name="Layer">&quot;Pause&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="856623219126475" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="575841634402458" type="System">
+                            <param id="0" name="Variable">pause</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="812539088421903">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="580055841803212" type="Keyboard">
+                    <param id="0" name="Key">27 (Esc)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="818100198454311" type="System">
+                    <param id="0" name="Layout">menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="841507234444813">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="601254016616763" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="662951311865458">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is any playing" sid="900545947517092" type="Audio" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="485633894045348" type="Audio">
+                            <param id="0" name="Audio file">music</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-35</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="863411261524508">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="647543019170629" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="470693871588107">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="303722201278653" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="400843143076399" type="coots">
+                            <param id="0" name="Animation">&quot;walkleft&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="681052463903064">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="661953319877366" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="690530841980514">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="284643039220673" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="486599304628376" type="coots">
+                            <param id="0" name="Animation">&quot;walkright&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="281162596892319">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="175460704488533" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="167422234698230">
+                    <conditions>
+                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="324666123718054" type="coots">
+                            <param id="0" name="Object">walls</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">41</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="576461573961612" type="coots" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

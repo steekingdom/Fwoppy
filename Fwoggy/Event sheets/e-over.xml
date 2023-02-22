@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>e-over</name>
+    <events>
+        <event-block sid="255025062917374">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="886120132427157" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">boop</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="905421608129109" type="Audio">
+                    <param id="0" name="Audio file">boop</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-35</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="811042230265888">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="644302328568136" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="267314730847264" type="Mouse">
+                    <param id="0" name="Cursor style">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="157477507388513">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="240764047787456" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="224826173137377" type="cursor">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="937243053612564">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="750501363602074" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="520500797850611">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is any playing" sid="653421489915691" type="Audio" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="370340250491873" type="Audio">
+                            <param id="0" name="Audio file">music</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-35</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="837885665868431">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="829114965202066" type="Keyboard">
+                    <param id="0" name="Key">27 (Esc)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="671507959856275" type="System">
+                    <param id="0" name="Layout">menu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

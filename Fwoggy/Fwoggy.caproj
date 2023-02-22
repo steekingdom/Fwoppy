@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Fwoggy</name>
+    <description></description>
+    <version>1</version>
+    <author>Stelios Winters</author>
+    <author-email></author-email>
+    <author-website>https://stelioswinters.itch.io/</author-website>
+    <app-id></app-id>
+    <unique-id>3kj3edrkpqto5</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="blurhorizontal">Blur Horizontal</effect>
+        <effect author="Scirra" id="blurvertical">Blur Vertical</effect>
+        <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
+        <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
+        <effect author="Brad Larson" id="vignette">Vignette</effect>
+        <effect author="Scirra" id="warp">Warp</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML 5" />
+    </configurations>
+    <window-size>
+        <width>1024</width>
+        <height>576</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>menu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Loader style">Nothing (not recommended)</prop>
+        <prop name="Preview browser">NW.js</prop>
+        <prop name="Preview mode">HTTP</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use iOS retina display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="walls" sid="715589781487720">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Physics" sid="197857657288092">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="Vignette">
+                    <effect id="vignette" />
+                </effect-type>
+            </effects>
+            <texture original-source="C:\Users\ste\Downloads\tiles.png" />
+        </object-type>
+        <object-type name="Yarn" sid="431384814054112">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="frame" sid="936596793497984" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Physics" sid="647335417392836">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="Warp">
+                    <effect id="warp" />
+                </effect-type>
+                <effect-type name="GlowHorizontal">
+                    <effect id="glowhorizontal" />
+                </effect-type>
+                <effect-type name="GlowVertical">
+                    <effect id="glowvertical" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="777988259089733" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ste\Downloads\hh(1)(2)(2).png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.771429" />
+                        <collision-poly>
+                            <point x="0.185714" y="0.185714" />
+                            <point x="0.5" y="0.0714286" />
+                            <point x="0.828571" y="0.185714" />
+                            <point x="0.914286" y="0.5" />
+                            <point x="0.828571" y="0.814286" />
+                            <point x="0.489286" y="0.942857" />
+                            <point x="0.185714" y="0.814286" />
+                            <point x="0.0857143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="icecubes" sid="473834509372626">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="674902396133281">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="569495056470213" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="coots" sid="432189011843228">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="isonfloor" sid="574291484941964" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Physics" sid="247597238919974">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="403419430554312">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="GlowHorizontal">
+                    <effect id="glowhorizontal" />
+                </effect-type>
+                <effect-type name="GlowVertical">
+                    <effect id="glowvertical" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="332631568589517" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0976563" y="0.449219" />
+                            <point x="0.703125" y="0.449219" />
+                            <point x="0.703125" y="0.859375" />
+                            <point x="0.0976563" y="0.859375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="6" loop="1" name="walkleft" pingpong="0" repeatcount="1" repeatto="0" sid="723755499238263" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0976563" y="0.449219" />
+                            <point x="0.703125" y="0.449219" />
+                            <point x="0.703125" y="0.859375" />
+                            <point x="0.0976563" y="0.859375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0976563" y="0.449219" />
+                            <point x="0.703125" y="0.449219" />
+                            <point x="0.703125" y="0.859375" />
+                            <point x="0.0976563" y="0.859375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0976563" y="0.449219" />
+                            <point x="0.703125" y="0.449219" />
+                            <point x="0.703125" y="0.859375" />
+                            <point x="0.0976563" y="0.859375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0976563" y="0.449219" />
+                            <point x="0.703125" y="0.449219" />
+                            <point x="0.703125" y="0.859375" />
+                            <point x="0.0976563" y="0.859375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0976563" y="0.449219" />
+                            <point x="0.703125" y="0.449219" />
+                            <point x="0.703125" y="0.859375" />
+                            <point x="0.0976563" y="0.859375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0976563" y="0.449219" />
+                            <point x="0.703125" y="0.449219" />
+                            <point x="0.703125" y="0.859375" />
+                            <point x="0.0976563" y="0.859375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="6" loop="1" name="walkright" pingpong="0" repeatcount="1" repeatto="0" sid="580856810857794" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.273438" y="0.449219" />
+                            <point x="0.898438" y="0.453125" />
+                            <point x="0.898438" y="0.859375" />
+                            <point x="0.273438" y="0.859375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.273438" y="0.449219" />
+                            <point x="0.898438" y="0.453125" />
+                            <point x="0.898438" y="0.859375" />
+                            <point x="0.273438" y="0.859375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.273438" y="0.449219" />
+                            <point x="0.898438" y="0.453125" />
+                            <point x="0.898438" y="0.859375" />
+                            <point x="0.273438" y="0.859375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.273438" y="0.449219" />
+                            <point x="0.898438" y="0.453125" />
+                            <point x="0.898438" y="0.859375" />
+                            <point x="0.273438" y="0.859375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.273438" y="0.449219" />
+                            <point x="0.898438" y="0.453125" />
+                            <point x="0.898438" y="0.859375" />
+                            <point x="0.273438" y="0.859375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.273438" y="0.449219" />
+                            <point x="0.898438" y="0.453125" />
+                            <point x="0.898438" y="0.859375" />
+                            <point x="0.273438" y="0.859375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="jump" pingpong="0" repeatcount="0" repeatto="0" sid="346640138748050" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.425781">
+                        <collision-poly>
+                            <point x="0.10853" y="0.447627" />
+                            <point x="0.697635" y="0.447627" />
+                            <point x="0.697635" y="0.864294" />
+                            <point x="0.10853" y="0.864294" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.10853" y="0.447627" />
+                            <point x="0.697635" y="0.447627" />
+                            <point x="0.697635" y="0.864294" />
+                            <point x="0.10853" y="0.864294" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="400234230507643">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Audio" sid="466701552495475">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="NWjs" sid="474107528101208">
+            <plugin id="NodeWebkit" />
+        </object-type>
+        <object-type name="Mouse" sid="208011671719838">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="qt" sid="225088730416097">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="GlowHorizontal">
+                    <effect id="glowhorizontal" />
+                </effect-type>
+                <effect-type name="GlowVertical">
+                    <effect id="glowvertical" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="145239389653248" speed="5">
+                    <frame duration="1" hotspotX="0.5006" hotspotY="0.5006" original-source="C:\Users\ste\Downloads\New Project(1).png">
+                        <collision-poly>
+                            <point x="0.312125" y="0.312125" />
+                            <point x="0.4994" y="0" />
+                            <point x="0.7503" y="0.2497" />
+                            <point x="0.7503" y="0.4994" />
+                            <point x="0.937575" y="0.937575" />
+                            <point x="0.4994" y="1" />
+                            <point x="0.062425" y="0.937575" />
+                            <point x="0.2497" y="0.4994" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="wallsmove" sid="751435837746152">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Physics" sid="950520054963928">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="911148546742783">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\ste\Downloads\hb.png" />
+        </object-type>
+        <object-type name="START" sid="234307438771694">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="436191908357364" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ste\Desktop\coots game\Change Color Here copy 2.png">
+                        <collision-poly>
+                            <point x="0.02" y="0.1" />
+                            <point x="0.5" y="0.0333333" />
+                            <point x="0.986667" y="0.0666667" />
+                            <point x="0.926667" y="0.5" />
+                            <point x="0.926667" y="0.633333" />
+                            <point x="0.5" y="0.733333" />
+                            <point x="0.02" y="0.9" />
+                            <point x="0.04" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MUTE" sid="496298117545560">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="374945930882580" speed="5">
+                    <frame duration="1" hotspotX="0.504886" hotspotY="0.514852" original-source="C:\Users\ste\Desktop\coots game\Change Color Here copy.png">
+                        <collision-poly>
+                            <point x="0.00763359" y="0.0344828" />
+                            <point x="0.496183" y="0" />
+                            <point x="0.992366" y="0.0344828" />
+                            <point x="0.977099" y="0.482759" />
+                            <point x="0.992366" y="0.965517" />
+                            <point x="0.496183" y="0.896552" />
+                            <point x="0.0152672" y="0.931035" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cursor" sid="699411384458608">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219905904644500" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ste\Desktop\All Files\All Projects\Video Games\Cyclomadron Series\Cyclomadron 1\Cyclomadron source\Cyclomadron\Animations\cursor\Default\000.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.53" />
+                            <point x="0.635714" y="0.745" />
+                            <point x="0.5" y="0.65" />
+                            <point x="0.5" y="0.65" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="background" sid="703789146078136">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="870715102832807" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ste\Desktop\coots game\youtubethumbnail.jpg">
+                        <collision-poly>
+                            <point x="0.257143" y="0.324" />
+                            <point x="0.5" y="0.154" />
+                            <point x="0.742857" y="0.324" />
+                            <point x="0.896825" y="0.5" />
+                            <point x="0.81746" y="0.77" />
+                            <point x="0.18254" y="0.77" />
+                            <point x="0.0952381" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fwoghat" sid="447430134522080">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="207311027912275" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ste\Desktop\coots game\c.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="boop" sid="874514923672901">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="383796527177093" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Browser" sid="594865253580583">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="wallback" sid="713946904532885">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="BlurHorizontal">
+                    <effect id="blurhorizontal" />
+                </effect-type>
+                <effect-type name="BlurVertical">
+                    <effect id="blurvertical" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="968865905942700" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.513514" original-source="C:\Users\ste\Desktop\coots game\tiles.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="torch" sid="694967729101755">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="GlowHorizontal">
+                    <effect id="glowhorizontal" />
+                </effect-type>
+                <effect-type name="GlowVertical">
+                    <effect id="glowvertical" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="198742025883145" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="escmenuPpauseMmuteEnterfu" sid="846986960652254">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="181717478395869" speed="5">
+                    <frame duration="1" hotspotX="0.501211" hotspotY="0.50303" original-source="C:\Users\ste\Downloads\assets\esc-menu p-pause m-mute enter-fu.png">
+                        <collision-poly>
+                            <point x="0.266344" y="0.666667" />
+                            <point x="0.498789" y="0.218182" />
+                            <point x="0.731235" y="0.672727" />
+                            <point x="0.670702" y="0.49697" />
+                            <point x="0.985472" y="0.963636" />
+                            <point x="0.498789" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.324455" y="0.49697" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="youMustPushTheYarnToTheEn" sid="912638202102038">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="982463543279932" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\ste\Downloads\assets\you must push the yarn to the en.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="0.996305" y="0.142857" />
+                            <point x="0.996305" y="0.857143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00738916" y="0.714286" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="awdmovement" sid="683341376955977">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="143567115340526" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.52381" original-source="C:\Users\ste\Downloads\assets\awd-movement.png">
+                        <collision-poly>
+                            <point x="0.0136054" y="0.190476" />
+                            <point x="1" y="0" />
+                            <point x="0.979592" y="0.714286" />
+                            <point x="0.00340136" y="0.952381" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>menu.xml</layout>
+        <layout>game.xml</layout>
+        <layout>game over.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>e-game.xml</event-sheet>
+        <event-sheet>e-menu.xml</event-sheet>
+        <event-sheet>e-over.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="7" />
+        <global-instance type="Audio" uid="8">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="NWjs" uid="9" />
+        <global-instance type="Mouse" uid="11" />
+        <global-instance type="Browser" uid="123" />
+    </global-instances>
+    <sounds-folder>
+        <file name="boop.ogg" />
+        <file name="jump.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="music.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons" />
+    </files-folder>
+</c2project>

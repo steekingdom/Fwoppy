@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>e-menu</name>
+    <events>
+        <variable constant="0" name="music" sid="326623585248942" static="0" type="text">on</variable>
+        <event-block sid="121324921913194">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="592371267992221" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="236194893723453" type="Mouse">
+                    <param id="0" name="Cursor style">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="419779498579165">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="180195361297448" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="782875916063188" type="cursor">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="446497819686870">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="931756471029027" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">MUTE</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="954582113928995">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="110698817548505" type="System">
+                            <param id="0" name="Variable">music</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;on&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Set master volume" sid="293732780706235" type="Audio">
+                            <param id="0" name="dB">-1000</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="130273517950427" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="729403862654827" type="System">
+                            <param id="0" name="Variable">music</param>
+                            <param id="1" name="Value">&quot;off&quot;</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="138438575497604" type="MUTE">
+                            <param id="0" name="Opacity">50</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="157541287005251">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="756116684081524" type="System">
+                            <param id="0" name="Variable">music</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;off&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Set master volume" sid="820824375167618" type="Audio">
+                            <param id="0" name="dB">-35</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="483227879409248" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="108485865307597" type="System">
+                            <param id="0" name="Variable">music</param>
+                            <param id="1" name="Value">&quot;on&quot;</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="558847405058247" type="MUTE">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="180100512825675">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="523955402144152" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">START</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="681763614985617" type="System">
+                    <param id="0" name="Layout">game</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="530375431288633">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="611895342897541" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="934466498570278">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is any playing" sid="505944629911592" type="Audio" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="921671740506309" type="Audio">
+                            <param id="0" name="Audio file">music</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-35</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="908658642515977">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="156507240659373" type="Keyboard">
+                    <param id="0" name="Key">27 (Esc)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="205232305810356" type="Browser" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
